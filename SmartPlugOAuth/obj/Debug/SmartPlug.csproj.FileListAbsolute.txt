@@ -1,0 +1,7 @@
+C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugOAuth\bin\Debug\SmartPlugOAuth.exe.config
+C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugOAuth\bin\Debug\SmartPlugOAuth.exe
+C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugOAuth\bin\Debug\SmartPlugOAuth.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugOAuth\obj\Debug\SmartPlug.csprojAssemblyReference.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugOAuth\obj\Debug\SmartPlug.csproj.CoreCompileInputs.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugOAuth\obj\Debug\SmartPlugOAuth.exe
+C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugOAuth\obj\Debug\SmartPlugOAuth.pdb
