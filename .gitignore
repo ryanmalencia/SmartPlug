@@ -34,3 +34,7 @@
 *.pdb
 *.cache
 *.dll
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal

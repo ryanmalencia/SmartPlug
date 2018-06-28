@@ -9,3 +9,13 @@ C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugAuthLambda\obj\Debug\net
 C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugAuthLambda\bin\Debug\netcoreapp2.0\SmartPlugAuthLambda.pdb
 C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.dll
 C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\bin\Debug\netcoreapp2.0\SmartPlugAuthLambda.deps.json
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\bin\Debug\netcoreapp2.0\SmartPlugAuthLambda.runtimeconfig.json
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\bin\Debug\netcoreapp2.0\SmartPlugAuthLambda.runtimeconfig.dev.json
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\bin\Debug\netcoreapp2.0\SmartPlugAuthLambda.dll
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\bin\Debug\netcoreapp2.0\SmartPlugAuthLambda.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.csproj.CoreCompileInputs.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.AssemblyInfoInputs.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.AssemblyInfo.cs
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.dll
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.pdb

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{769EC1B1-F8B7-4E8F-8EFE-891B5F5C73CD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SmartPlugOAuth</RootNamespace>
-    <AssemblyName>SmartPlugOAuth</AssemblyName>
+    <RootNamespace>SmartPlug</RootNamespace>
+    <AssemblyName>SmartPlug</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
