@@ -38,3 +38,4 @@
 *.ide
 *.ide-shm
 *.ide-wal
+.vs/SmartPlug/DesignTimeBuild/.dtbcache
