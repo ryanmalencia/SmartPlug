@@ -19,3 +19,10 @@ C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csprojAs
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csproj.CoreCompileInputs.cache
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.exe
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.pdb
+C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe.config
+C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe
+C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.pdb
+C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csprojAssemblyReference.cache
+C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csproj.CoreCompileInputs.cache
+C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.exe
+C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.pdb

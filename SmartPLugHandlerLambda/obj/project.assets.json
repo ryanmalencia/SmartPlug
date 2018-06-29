@@ -3349,23 +3349,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ryanm\\.nuget\\packages\\": {},
+    "C:\\Users\\Computer\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ryanm\\Documents\\GitHub\\SmartPlug\\SmartPLugHandlerLambda\\SmartPLugHandlerLambda.csproj",
+      "projectUniqueName": "C:\\Users\\Computer\\Documents\\GitHub\\SmartPlug\\SmartPLugHandlerLambda\\SmartPLugHandlerLambda.csproj",
       "projectName": "SmartPLugHandlerLambda",
-      "projectPath": "C:\\Users\\ryanm\\Documents\\GitHub\\SmartPlug\\SmartPLugHandlerLambda\\SmartPLugHandlerLambda.csproj",
-      "packagesPath": "C:\\Users\\ryanm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ryanm\\Documents\\GitHub\\SmartPlug\\SmartPLugHandlerLambda\\obj\\",
+      "projectPath": "C:\\Users\\Computer\\Documents\\GitHub\\SmartPlug\\SmartPLugHandlerLambda\\SmartPLugHandlerLambda.csproj",
+      "packagesPath": "C:\\Users\\Computer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Computer\\Documents\\GitHub\\SmartPlug\\SmartPLugHandlerLambda\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ryanm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
