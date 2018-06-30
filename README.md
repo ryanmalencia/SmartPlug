@@ -7,3 +7,5 @@ The setup for this project was based on <a href="https://www.youtube.com/watch?v
 The documentation found in the code tries to describe what is happening at each step. 
 
 This project is not yet complete. 
+
+Feel free to use this project as a basis for your custom Alexa Smart Home Skill. 
