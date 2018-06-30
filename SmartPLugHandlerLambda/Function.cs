@@ -99,9 +99,7 @@ namespace SmartPLugHandlerLambda
         }
 
 
-        // 
-        // RESPONSE
-        // 
+#region RESPONSE
         public class Header
         {
             [JsonProperty("namespace")]
@@ -239,11 +237,9 @@ namespace SmartPLugHandlerLambda
             [JsonProperty("event")]
             public Event Event { get; set; }
         }
+#endregion
 
-
-        // 
-        // REQUEST
-        // 
+#region REQUEST
         public class RequestHeader
         {
             [JsonProperty("namespace")]
@@ -283,5 +279,6 @@ namespace SmartPLugHandlerLambda
             [JsonProperty("payload")]
             public RequestPayload Payload { get; set; }
         }
+#endregion
     }
 }
