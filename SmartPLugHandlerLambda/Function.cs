@@ -15,27 +15,28 @@ namespace SmartPLugHandlerLambda
     {
         public object FunctionHandler(object input, ILambdaContext context)
         {
-            // Log request to amazon file
-
+            // Get request object
             Request request = JsonConvert.DeserializeObject<Request>(input.ToString());
 
-
+            // Create response object
             Response response = new Response
             {
                 Event = new Event()
             };
 
             response.Event.Header = new Header();
-            response.Event.Payload = new Payload();
+            response.Event.Payload = new Payload
+            {
+                Endpoints = new List<Endpoint>()
+            };
 
-            response.Event.Payload.Endpoints = new List<Endpoint>();
-
+            // Set header properties
             response.Event.Header.Namespace = "Alexa.Discovery";
             response.Event.Header.Name = "Discover.Response";
             response.Event.Header.PayloadVersion = "3";
             response.Event.Header.MessageId = "0a58ace0-e6ab-47de-b6af-b600b5ab8a81"; //no idea if this is okay
 
-
+            // Create endpoint
             Endpoint ep1 = new Endpoint
             {
                 EndpointId = "endpoint-001",
@@ -46,7 +47,7 @@ namespace SmartPLugHandlerLambda
             };
             ep1.Capabilities = new List<Capability>();
 
-
+            // Create cookie
             Cookie c1 = new Cookie
             {
                 Detail1 = "This is a plug",
@@ -54,7 +55,7 @@ namespace SmartPLugHandlerLambda
             };
             ep1.Cookie = c1;
 
-
+            // Create capabilities
             Capability cap1 = new Capability
             {
                 Type = "AlexaInterface",
@@ -68,28 +69,32 @@ namespace SmartPLugHandlerLambda
                 Version = "3"
             };
 
+            // Create properties
             Properties p1 = new Properties();
             Supported s1 = new Supported
             {
                 Name = "powerState"
             };
-
             p1.Supported = new List<Supported>();
-
             p1.Supported.Add(s1);
             p1.ProactivelyReported = true;
             p1.Retrievable = true;
-
             cap2.Properties = p1;
 
+            // Set capabilities
             ep1.Capabilities.Add(cap1);
             ep1.Capabilities.Add(cap2);
 
+            // Add endpoint to response
             response.Event.Payload.Endpoints.Add(ep1);
 
+            // Create json string of response
             string responsestring = JsonConvert.SerializeObject(response);
 
+            // Log response
             LambdaLogger.Log("Response: " + responsestring + Environment.NewLine);
+
+            // Return response. Not sure why we have to serialize again but ya know
             return JsonConvert.SerializeObject(responsestring);
         }
 
