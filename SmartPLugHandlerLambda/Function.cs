@@ -16,10 +16,87 @@ namespace SmartPLugHandlerLambda
         public object FunctionHandler(object input, ILambdaContext context)
         {
             // Log request to amazon file
-            LambdaLogger.Log(input.ToString() + Environment.NewLine);
-            return JsonConvert.SerializeObject(new Response());
+
+            Request request = JsonConvert.DeserializeObject<Request>(input.ToString());
+
+
+            Response response = new Response
+            {
+                Event = new Event()
+            };
+
+            response.Event.Header = new Header();
+            response.Event.Payload = new Payload();
+
+            response.Event.Payload.Endpoints = new List<Endpoint>();
+
+            response.Event.Header.Namespace = "Alexa.Discovery";
+            response.Event.Header.Name = "Discover.Response";
+            response.Event.Header.PayloadVersion = "3";
+            response.Event.Header.MessageId = "0a58ace0-e6ab-47de-b6af-b600b5ab8a81"; //no idea if this is okay
+
+
+            Endpoint ep1 = new Endpoint
+            {
+                EndpointId = "endpoint-001",
+                ManufacturerName = "Ryan Malencia",
+                FriendlyName = "Plug",
+                Description = "This is a plug!",
+                DisplayCategories = new List<string>(){ "SWITCH" }
+            };
+            ep1.Capabilities = new List<Capability>();
+
+
+            Cookie c1 = new Cookie
+            {
+                Detail1 = "This is a plug",
+                Detail2 = "that can be controlled"
+            };
+            ep1.Cookie = c1;
+
+
+            Capability cap1 = new Capability
+            {
+                Type = "AlexaInterface",
+                Interface = "Alexa",
+                Version = "3"
+            };
+            Capability cap2 = new Capability
+            {
+                Type = "AlexaInterface",
+                Interface = "Alexa.PowerController",
+                Version = "3"
+            };
+
+            Properties p1 = new Properties();
+            Supported s1 = new Supported
+            {
+                Name = "powerState"
+            };
+
+            p1.Supported = new List<Supported>();
+
+            p1.Supported.Add(s1);
+            p1.ProactivelyReported = true;
+            p1.Retrievable = true;
+
+            cap2.Properties = p1;
+
+            ep1.Capabilities.Add(cap1);
+            ep1.Capabilities.Add(cap2);
+
+            response.Event.Payload.Endpoints.Add(ep1);
+
+            string responsestring = JsonConvert.SerializeObject(response);
+
+            LambdaLogger.Log("Response: " + responsestring + Environment.NewLine);
+            return JsonConvert.SerializeObject(responsestring);
         }
 
+
+        // 
+        // RESPONSE
+        // 
         public class Header
         {
             [JsonProperty("namespace")]
@@ -143,14 +220,63 @@ namespace SmartPLugHandlerLambda
             public IList<Endpoint> Endpoints { get; set; }
         }
 
-        public class Response
+        public class Event
         {
-
             [JsonProperty("header")]
             public Header Header { get; set; }
 
             [JsonProperty("payload")]
             public Payload Payload { get; set; }
+        }
+
+        public class Response
+        {
+            [JsonProperty("event")]
+            public Event Event { get; set; }
+        }
+
+
+        // 
+        // REQUEST
+        // 
+        public class RequestHeader
+        {
+            [JsonProperty("namespace")]
+            public string Namespace { get; set; }
+
+            [JsonProperty("name")]
+            public string Name { get; set; }
+
+            [JsonProperty("payloadVersion")]
+            public string PayloadVersion { get; set; }
+
+            [JsonProperty("messageId")]
+            public string MessageId { get; set; }
+        }
+
+        public class RequestScope
+        {
+            [JsonProperty("type")]
+            public string Type { get; set; }
+
+            [JsonProperty("token")]
+            public string Token { get; set; }
+        }
+
+        public class RequestPayload
+        {
+            [JsonProperty("scope")]
+            public RequestScope Scope { get; set; }
+        }
+
+        [JsonObject("directive")]
+        public class Request
+        {
+            [JsonProperty("header")]
+            public RequestHeader Header { get; set; }
+
+            [JsonProperty("payload")]
+            public RequestPayload Payload { get; set; }
         }
     }
 }

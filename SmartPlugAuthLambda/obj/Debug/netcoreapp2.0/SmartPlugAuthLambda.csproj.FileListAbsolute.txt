@@ -30,3 +30,4 @@ C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netco
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.AssemblyInfo.cs
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.dll
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugAuthLambda\obj\Debug\netcoreapp2.0\SmartPlugAuthLambda.csprojAssemblyReference.cache

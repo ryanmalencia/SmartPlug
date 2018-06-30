@@ -1341,23 +1341,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Computer\\.nuget\\packages\\": {},
+    "C:\\Users\\ryanm\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Computer\\Documents\\GitHub\\SmartPlug\\SmartPlugAuthLambda\\SmartPlugAuthLambda.csproj",
+      "projectUniqueName": "C:\\Users\\ryanm\\Documents\\GitHub\\SmartPlug\\SmartPlugAuthLambda\\SmartPlugAuthLambda.csproj",
       "projectName": "SmartPlugAuthLambda",
-      "projectPath": "C:\\Users\\Computer\\Documents\\GitHub\\SmartPlug\\SmartPlugAuthLambda\\SmartPlugAuthLambda.csproj",
-      "packagesPath": "C:\\Users\\Computer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Computer\\Documents\\GitHub\\SmartPlug\\SmartPlugAuthLambda\\obj\\",
+      "projectPath": "C:\\Users\\ryanm\\Documents\\GitHub\\SmartPlug\\SmartPlugAuthLambda\\SmartPlugAuthLambda.csproj",
+      "packagesPath": "C:\\Users\\ryanm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ryanm\\Documents\\GitHub\\SmartPlug\\SmartPlugAuthLambda\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ryanm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -9,3 +9,14 @@ C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPLugHandlerLambda\obj\Releas
 C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.AssemblyInfo.cs
 C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.dll
 C:\Users\ryanm\Documents\GitHub\SmartPlugOAuth\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.deps.json
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.runtimeconfig.json
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.runtimeconfig.dev.json
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.dll
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.csprojAssemblyReference.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.csproj.CoreCompileInputs.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.AssemblyInfoInputs.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.AssemblyInfo.cs
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.dll
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Release\netcoreapp2.0\linux-x64\SmartPLugHandlerLambda.pdb
