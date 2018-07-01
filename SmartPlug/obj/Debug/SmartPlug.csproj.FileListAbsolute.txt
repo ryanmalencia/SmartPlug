@@ -12,13 +12,6 @@ C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugOAuth\obj\Debug\SmartPlug.csp
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugOAuth\obj\Debug\SmartPlug.csproj.CoreCompileInputs.cache
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugOAuth\obj\Debug\SmartPlug.exe
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlugOAuth\obj\Debug\SmartPlug.pdb
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe.config
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.pdb
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csprojAssemblyReference.cache
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csproj.CoreCompileInputs.cache
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.exe
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.pdb
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe.config
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.pdb
@@ -26,3 +19,10 @@ C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.cspro
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csproj.CoreCompileInputs.cache
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.exe
 C:\Users\Computer\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe.config
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.exe
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\bin\Debug\SmartPlug.pdb
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csprojAssemblyReference.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.csproj.CoreCompileInputs.cache
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.exe
+C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPlug\obj\Debug\SmartPlug.pdb

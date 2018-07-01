@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "SmartPLugHandlerLambda/1.0.0": {
+      "SmartPlugHandlerLambda/1.0.0": {
         "dependencies": {
           "Amazon.Lambda.Core": "1.0.0",
           "Amazon.Lambda.Serialization.Json": "1.1.0"
         },
         "runtime": {
-          "SmartPLugHandlerLambda.dll": {}
+          "SmartPlugHandlerLambda.dll": {}
         }
       },
       "Amazon.Lambda.Core/1.0.0": {
@@ -371,7 +371,7 @@
     }
   },
   "libraries": {
-    "SmartPLugHandlerLambda/1.0.0": {
+    "SmartPlugHandlerLambda/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
