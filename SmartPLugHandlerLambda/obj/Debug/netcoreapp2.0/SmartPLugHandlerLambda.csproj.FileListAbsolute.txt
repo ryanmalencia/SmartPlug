@@ -25,7 +25,6 @@ C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Debug\netco
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Debug\netcoreapp2.0\SmartPlugHandlerLambda.runtimeconfig.dev.json
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Debug\netcoreapp2.0\SmartPlugHandlerLambda.dll
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\bin\Debug\netcoreapp2.0\SmartPlugHandlerLambda.pdb
-C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Debug\netcoreapp2.0\SmartPlugHandlerLambda.csprojAssemblyReference.cache
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Debug\netcoreapp2.0\SmartPlugHandlerLambda.csproj.CoreCompileInputs.cache
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Debug\netcoreapp2.0\SmartPlugHandlerLambda.AssemblyInfoInputs.cache
 C:\Users\ryanm\Documents\GitHub\SmartPlug\SmartPLugHandlerLambda\obj\Debug\netcoreapp2.0\SmartPlugHandlerLambda.AssemblyInfo.cs

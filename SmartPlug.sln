@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPlugAuthLambda", "SmartPlugAuthLambda\SmartPlugAuthLambda.csproj", "{FCF44EF9-214E-43F1-B7A6-A04935FEF928}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPlugHandlerLambda", "SmartPLugHandlerLambda\SmartPlugHandlerLambda.csproj", "{A44621C0-D565-45A8-B218-1EEBFCCB7314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPLugHandlerLambda", "SmartPLugHandlerLambda\SmartPLugHandlerLambda.csproj", "{A44621C0-D565-45A8-B218-1EEBFCCB7314}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPlug", "SmartPlug\SmartPlug.csproj", "{769EC1B1-F8B7-4E8F-8EFE-891B5F5C73CD}"
 EndProject
