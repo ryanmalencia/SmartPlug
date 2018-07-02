@@ -40,25 +40,18 @@ namespace SmartPLugHandlerLambda
                 response.Event.Header.Namespace = "Alexa.Discovery";
                 response.Event.Header.Name = "Discover.Response";
                 response.Event.Header.PayloadVersion = "3";
+                response.Event.Header.MessageId = request.Directive.Header.MessageId;
 
                 // Create endpoint
                 Endpoint ep1 = new Endpoint
                 {
                     EndpointId = "endpoint-001",
                     ManufacturerName = "Ryan Malencia",
-                    FriendlyName = "Plug",
+                    FriendlyName = "Room Plug",
                     Description = "This is a plug!",
-                    DisplayCategories = new List<string>() { "SWITCH" }
+                    DisplayCategories = new List<string>() { "SMARTPLUG" }
                 };
                 ep1.Capabilities = new List<Capability>();
-
-                // Create cookie
-                Cookie c1 = new Cookie
-                {
-                    Detail1 = "This is a plug",
-                    Detail2 = "that can be controlled"
-                };
-                ep1.Cookie = c1;
 
                 // Create capabilities
                 Capability cap1 = new Capability
@@ -82,8 +75,8 @@ namespace SmartPLugHandlerLambda
                 };
                 p1.Supported = new List<Supported>();
                 p1.Supported.Add(s1);
-                p1.ProactivelyReported = true;
-                p1.Retrievable = true;
+                //p1.ProactivelyReported = true;
+                //p1.Retrievable = true;
                 cap2.Properties = p1;
 
                 // Set capabilities
@@ -94,16 +87,8 @@ namespace SmartPLugHandlerLambda
                 response.Event.Payload.Endpoints.Add(ep1);
             }
 
-            // Create json string of response
-            string responsestring = JsonConvert.SerializeObject(response);
-
-            // Log response
-            LambdaLogger.Log("Response: " + responsestring + Environment.NewLine);
-
-            // Return response. Not sure why we have to serialize again but ya know
-            return JsonConvert.SerializeObject(responsestring);
+            return response;
         }
-
 
 #region RESPONSE
         public class Header
@@ -157,24 +142,6 @@ namespace SmartPLugHandlerLambda
             public int Height { get; set; }
         }
 
-        public class CameraStreamConfiguration
-        {
-            [JsonProperty("protocols")]
-            public IList<string> Protocols { get; set; }
-
-            [JsonProperty("resolutions")]
-            public IList<Resolution> Resolutions { get; set; }
-
-            [JsonProperty("authorizationTypes")]
-            public IList<string> AuthorizationTypes { get; set; }
-
-            [JsonProperty("videoCodecs")]
-            public IList<string> VideoCodecs { get; set; }
-
-            [JsonProperty("audioCodecs")]
-            public IList<string> AudioCodecs { get; set; }
-        }
-
         public class Capability
         {
             [JsonProperty("type")]
@@ -194,10 +161,7 @@ namespace SmartPLugHandlerLambda
 
             [JsonProperty("proactivelyReported")]
             public bool? ProactivelyReported { get; set; }
-
-            [JsonProperty("cameraStreamConfigurations")]
-            public IList<CameraStreamConfiguration> CameraStreamConfigurations { get; set; }
-        }
+        }
 
         public class Endpoint
         {
