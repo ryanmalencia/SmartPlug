@@ -50,7 +50,7 @@ namespace SmartPLugHandlerLambda
                 {
                     EndpointId = "endpoint-001",
                     ManufacturerName = "Ryan Malencia",
-                    FriendlyName = "My Switch",
+                    FriendlyName = "Apple Jacks",
                     Description = "This is a switch!",
                     DisplayCategories = new List<string>() { "SMARTPLUG" }
                 };
