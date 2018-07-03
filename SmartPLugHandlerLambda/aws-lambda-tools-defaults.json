@@ -15,7 +15,7 @@
     "function-timeout"     : 30,
     "function-handler"     : "SmartPLugHandlerLambda::SmartPLugHandlerLambda.Function::FunctionHandler",
     "function-name"        : "SmartPLugHandlerLambda",
-    "function-role"        : "arn:aws:iam::320502343338:role/lambda_exec_SmartPLugHandlerLambda",
+    "function-role"        : "arn:aws:iam::320502343338:role/lambda_exec_SmartPLugHandlerLambda-3",
     "tracing-mode"         : "PassThrough",
     "environment-variables" : ""
 }

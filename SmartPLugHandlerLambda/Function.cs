@@ -6,6 +6,8 @@ using Amazon.Lambda.Core;
 using Newtonsoft.Json;
 using Amazon.SQS;
 using Amazon.SQS.Model;
+using SmartPLugHandlerLambda.Request;
+using SmartPLugHandlerLambda.Response;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
@@ -19,22 +21,23 @@ namespace SmartPLugHandlerLambda
             // Get request object
             Request request = JsonConvert.DeserializeObject<Request>(input.ToString());
             string requestType = request.Directive.Header.Name;
-            LambdaLogger.Log(requestType + Environment.NewLine);
-
-            // Create response object
-            Response response = new Response
-            {
-                Event = new Event()
-            };
-
-            response.Event.Header = new Header();
-            response.Event.Payload = new Payload
-            {
-                Endpoints = new List<Endpoint>()
-            };
+            LambdaLogger.Log("Request type: " + requestType + Environment.NewLine);
 
             if (requestType == "Discover")
             {
+                // Create response object
+                Response response = new Response
+                {
+                    Event = new Event()
+                };
+
+                response.Event.Header = new Header();
+
+                LambdaLogger.Log("DISCOVER: " + input.ToString());
+                response.Event.Payload = new Payload
+                {
+                    Endpoints = new List<Endpoint>()
+                };
                 LambdaLogger.Log("Discovering devices" + Environment.NewLine);
                 // Set header properties
                 response.Event.Header.Namespace = "Alexa.Discovery";
@@ -47,8 +50,8 @@ namespace SmartPLugHandlerLambda
                 {
                     EndpointId = "endpoint-001",
                     ManufacturerName = "Ryan Malencia",
-                    FriendlyName = "Room Plug",
-                    Description = "This is a plug!",
+                    FriendlyName = "My Switch",
+                    Description = "This is a switch!",
                     DisplayCategories = new List<string>() { "SMARTPLUG" }
                 };
                 ep1.Capabilities = new List<Capability>();
@@ -85,9 +88,137 @@ namespace SmartPLugHandlerLambda
 
                 // Add endpoint to response
                 response.Event.Payload.Endpoints.Add(ep1);
-            }
 
-            return response;
+                return response;
+            }
+            else if (requestType == "TurnOff")
+            {
+                PowerRequest powerRequest = JsonConvert.DeserializeObject<PowerRequest>(input.ToString());
+                PowerResponse powerResponse = new PowerResponse
+                {
+                    Context = new Context
+                    {
+                        Properties = new List<Property>()
+                    }
+                };
+                Property p1 = new Property
+                {
+                    Namespace = "Alexa.PowerController",
+                    Name = "powerState",
+                    Value = "OFF",
+                    TimeOfSample = DateTime.Now,
+                    UncertaintyInMilliseconds = 200
+                };
+                Property p2 = new Property
+                {
+                    Namespace = "Alexa.EndpointHealth",
+                    Name = "connectivity",
+                    Value = "OK",
+                    TimeOfSample = DateTime.Now,
+                    UncertaintyInMilliseconds = 200
+                };
+                powerResponse.Context.Properties.Add(p1);
+                powerResponse.Context.Properties.Add(p2);
+
+                powerResponse.Event = new SmartPLugHandlerLambda.Response.Event
+                {
+                    Header = new SmartPLugHandlerLambda.Response.Header
+                    {
+                        Namespace = "Alexa",
+                        Name = "Response",
+                        PayloadVersion = "3",
+                        MessageId = powerRequest.Directive.Header.MessageId,
+                        CorrelationToken = powerRequest.Directive.Header.CorrelationToken
+                    },
+
+                    Endpoint = new SmartPLugHandlerLambda.Response.Endpoint
+                    {
+                        Scope = new SmartPLugHandlerLambda.Response.Scope
+                        {
+                            Type = powerRequest.Directive.Endpoint.Scope.Type,
+                            Token = powerRequest.Directive.Endpoint.Scope.Token
+                        },
+                        EndpointId = powerRequest.Directive.Endpoint.EndpointId,
+                    },
+
+                    Payload = new SmartPLugHandlerLambda.Response.Payload()
+                };
+
+
+                LambdaLogger.Log("OFF: " + input.ToString());
+                const string queueUrl = "https://sqs.us-east-1.amazonaws.com/320502343338/SmartPlugQueue";
+                var config = new AmazonSQSConfig
+                {
+                    ServiceURL = "http://sqs.us-east-1.amazonaws.com"
+                };
+                var client = new AmazonSQSClient(config);
+                client.SendMessageAsync(queueUrl, "OFF", new System.Threading.CancellationToken());
+                return powerResponse;
+            }
+            else if (requestType == "TurnOn")
+            {
+                PowerRequest powerRequest = JsonConvert.DeserializeObject<PowerRequest>(input.ToString());
+                PowerResponse powerResponse = new PowerResponse
+                {
+                    Context = new Context
+                    {
+                        Properties = new List<Property>()
+                    }
+                };
+                Property p1 = new Property
+                {
+                    Namespace = "Alexa.PowerController",
+                    Name = "powerState",
+                    Value = "ON",
+                    TimeOfSample = DateTime.Now,
+                    UncertaintyInMilliseconds = 200
+                };
+                Property p2 = new Property
+                {
+                    Namespace = "Alexa.EndpointHealth",
+                    Name = "connectivity",
+                    Value = "OK",
+                    TimeOfSample = DateTime.Now,
+                    UncertaintyInMilliseconds = 200
+                };
+                powerResponse.Context.Properties.Add(p1);
+                powerResponse.Context.Properties.Add(p2);
+
+                powerResponse.Event = new SmartPLugHandlerLambda.Response.Event
+                {
+                    Header = new SmartPLugHandlerLambda.Response.Header
+                    {
+                        Namespace = "Alexa",
+                        Name = "Response",
+                        PayloadVersion = "3",
+                        MessageId = powerRequest.Directive.Header.MessageId,
+                        CorrelationToken = powerRequest.Directive.Header.CorrelationToken
+                    },
+
+                    Endpoint = new SmartPLugHandlerLambda.Response.Endpoint
+                    {
+                        Scope = new SmartPLugHandlerLambda.Response.Scope
+                        {
+                            Type = powerRequest.Directive.Endpoint.Scope.Type,
+                            Token = powerRequest.Directive.Endpoint.Scope.Token
+                        },
+                        EndpointId = powerRequest.Directive.Endpoint.EndpointId,
+                    },
+
+                    Payload = new SmartPLugHandlerLambda.Response.Payload()
+                };
+
+                LambdaLogger.Log("ON: " + input.ToString());
+                const string queueUrl = "https://sqs.us-east-1.amazonaws.com/320502343338/SmartPlugQueue";
+                var config = new AmazonSQSConfig
+                {
+                    ServiceURL = "http://sqs.us-east-1.amazonaws.com"
+                };
+                var client = new AmazonSQSClient(config);
+                client.SendMessageAsync(queueUrl, "ON", new System.Threading.CancellationToken());
+                return powerResponse;
+            }
+            return new Response();
         }
 
 #region RESPONSE
