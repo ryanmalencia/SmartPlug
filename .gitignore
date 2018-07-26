@@ -38,10 +38,6 @@
 *.ide
 *.ide-shm
 *.ide-wal
-.vs/SmartPlug/DesignTimeBuild/.dtbcache
-SmartPlugAuthLambda/bin/*
-SmartPlugAuthLambda/obj/*
-SmartPlug/bin/*
-SmartPlug/obj/*
-SmartPLugHandlerLambda/bin/*
-SmartPLugHandlerLambda/obj/*
+*/obj/*
+*/bin/*
+*.dtbcache

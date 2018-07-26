@@ -152,7 +152,9 @@ namespace SmartPLugHandlerLambda
                     ServiceURL = "http://sqs.us-east-1.amazonaws.com"
                 };
                 var client = new AmazonSQSClient(config);
-                client.SendMessageAsync(queueUrl, "OFF", new System.Threading.CancellationToken());
+                var sendMessage = client.SendMessageAsync(queueUrl, "OFF", new System.Threading.CancellationToken());
+                while (!sendMessage.IsCompleted)
+                { }
                 return powerResponse;
             }
             else if (requestType == "TurnOn")
@@ -215,7 +217,9 @@ namespace SmartPLugHandlerLambda
                     ServiceURL = "http://sqs.us-east-1.amazonaws.com"
                 };
                 var client = new AmazonSQSClient(config);
-                client.SendMessageAsync(queueUrl, "ON", new System.Threading.CancellationToken());
+                var sendMessage = client.SendMessageAsync(queueUrl, "ON", new System.Threading.CancellationToken());
+                while (!sendMessage.IsCompleted)
+                { }
                 return powerResponse;
             }
             return new Response();
